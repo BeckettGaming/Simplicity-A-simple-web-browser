@@ -30,6 +30,8 @@ namespace SimpleWebBrowser
             this.Close();
         }
 
+
+
         /// <summary>
         /// This will show a box with the author information when the about menu item is selected
         /// </summary>
@@ -57,8 +59,18 @@ namespace SimpleWebBrowser
         {
             toolStripStatusLabel1.Text = "Navigation has started";
             webBrowser1.Navigate(textBox1.Text);
+            textBox1.Clear();
         }
 
+       //This will Take you to the home page 
+
+        private void GoHome()
+        {
+            webBrowser1.Navigate(textBox3.Text);
+        }
+
+
+        
         /// <summary>
         /// This function will start navigation by simulating a click on the navigate button when 'enter' is pressed when textbox1 is in focus
         /// </summary>
@@ -115,9 +127,141 @@ namespace SimpleWebBrowser
                 toolStripProgressBar1.ProgressBar.Value = 0;
             }
         }
+        /// <summary>
+        /// This code will run anytime the mouse enter's the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void notesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void button3_MouseCaptureChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            textBox2.BringToFront();
+        }
+
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            textBox2.SendToBack();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This programe was made by Nathan Beckett for his education and its in Version 0.0.200");
+        }
+
+        private void button3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void button3_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // if the keystroke was ESC then do something
+            if (e.KeyChar == (char)ConsoleKey.Escape)
+            {
+                //Send it back
+                textBox2.SendToBack();
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // if the keystroke was ESC then do something
+            if (e.KeyChar == (char)ConsoleKey.Escape)
+            {
+                //Send it back
+                textBox2.SendToBack();
+            }
+        }
+
+        private void webBrowser1_FileDownload(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void Form1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thanks for Downloading Simplicity, This version is 0.0.209 and if you would like to help the making of simplicity please send suggestions to beckett2002@hotmail.co.uk.  If you are looking to report bugs or need any help message SimplicityHelp@hotmail.com and report the problem");
+        }
+
+        private void button10_MouseClick(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GoHome();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoBack();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoForward();
+        }
 
 
         }
+
+
     }
 
 
